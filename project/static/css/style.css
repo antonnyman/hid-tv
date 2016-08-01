@@ -1,0 +1,183 @@
+@font-face {
+	font-family: 'SST Pro';
+	src: url('../fonts/SSTPro-Light.eot');
+	src: url('../fonts/SSTPro-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SSTPro-Light.woff') format('woff'),
+		url('../fonts/SSTPro-Light.ttf') format('truetype'),
+		url('../fonts/SSTPro-Light.svg#SSTPro-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SST Pro';
+	src: url('../fonts/SSTPro-Bold.eot');
+	src: url('../fonts/SSTPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SSTPro-Bold.woff') format('woff'),
+		url('../fonts/SSTPro-Bold.ttf') format('truetype'),
+		url('../fonts/SSTPro-Bold.svg#SSTPro-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* Slideshow */
+
+/* fix for slide */
+.owl-item {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'SST Pro';
+}
+
+
+.clear {
+    clear: both;
+}
+
+.owl-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.item {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    animation: fade 10s ease;
+    
+}
+
+.item img {
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width:20%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4)
+}
+
+header {
+    
+    color: #fff;
+}
+
+.header-top {
+    padding-top: 1em;
+    text-align: center;  
+}
+
+.time-lund {
+    opacity: 1;
+    font-size: 4.5em;
+}
+
+.date-lund{
+    margin-top: -0.5em;
+    font-size: 2em;
+}
+
+.header-bot {
+    display:block;
+    padding-top: 0.5em;
+    width: 230px;
+    margin: 0 auto;
+    font-size: 1.7em;
+}
+
+.time-tokyo {
+    float: left;
+    text-align: center;
+}
+
+.time-sanmateo {
+    float:right;
+    text-align: center;
+}
+
+.place-tokyo {  
+    display: block;
+    font-size: 0.6em;
+}
+
+.place-sanmateo {
+    display:block;
+    font-size: 0.6em;
+}
+
+.bus-times {
+    display: block;
+    padding: 1em 1.6em;
+    color: #fff;
+    font-size: 1.2em;
+    text-overflow: ellipsis;
+}
+
+.first-bus-times {
+    font-weight: 700;
+}
+
+.second-bus-times {
+    margin-top: 0.3em;
+}
+
+.bus-icon {
+    margin-left: -0.1em;
+}
+
+.lunch {
+    color: #fff;
+    width: 300px;
+    margin: 0 2em;
+}
+
+.lunch-item {
+    padding: 0.2em 0;
+    font-size: 1.1em;
+}
+
+.in-office {
+    color: #fff;
+    padding: 1em 2em;
+}
+
+.in-office-item {
+    margin-top: 0.5em;
+}
+
+.in-office-item-name {
+    font-size: 1.3em;
+    padding: 1em;
+}
+
+.avatar {
+    border-radius: 15%;
+    vertical-align: middle;
+}
+
+.avatar-active {
+    border-radius: 15%;
+    vertical-align: middle;
+    border: 2px #00C853 solid;
+    
+}
+
+
+
+.avatar-active-border{
+}

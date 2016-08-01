@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="columns col-multiline">
+        <div class="column col-sm-12">
+            <h3>{{ current_user.name }}</h3>
+            <p><a href="{{current_user.link}}" target="_blank">Edit profile on Google+</a></p>
+            <p><a href="{{url_for('logout')}}">Logout</a></p>
+        </div>
+        <div class="column col-sm-12">
+            <p><a href="{{ lifelog }}" class="btn">Connect to Lifelog</a> <span class="label">{{ connected }}</span></p>
+            <p>{{ token }}</p>
+            <p>{{ total_time }}</p>
+            <p>{{ location }}</p>
+        </div>
+        <div class="column col-sm-6">
+            <form method="POST" prefix="profile">
+                <div class="col-sm-12">  
+                    <div class="form-group">
+                        <label class="form-label">Set status</label>
+                        <label class="form-radio">
+                            {% if current_user.normal %}
+                                <input type="radio" name="status" value="normal" id="normal" checked />
+                            {% else %}
+                                <input type="radio" name="status" value="normal" id="normal" />
+                            {% endif %}
+                            <i class="form-icon"></i> Normal
+                        </label>
+                        <label class="form-radio">
+                            {% if current_user.vab %}
+                                <input type="radio" name="status" value="vab" id="vab" checked />
+                            {% else %}
+                                <input type="radio" name="status" value="vab" id="vab" />
+                            {% endif %}
+                            <i class="form-icon"></i> VAB
+                        </label>
+                        <label class="form-radio">
+                            {% if current_user.ooo %}
+                                <input type="radio" name="status" value="ooo" id="ooo" checked />
+                            {% else %}
+                                <input type="radio" name="status" value="ooo" id="ooo" />
+                            {% endif %}
+                            <i class="form-icon"></i> OoO
+                        </label>
+                        <label class="form-radio">
+                            {% if current_user.vacation %}
+                                <input type="radio" name="status" value="vacation" id="vacation" checked />
+                            {% else %}
+                                <input type="radio" name="status" value="vacation" id="vacation" /> 
+                            {% endif %}
+                            <i class="form-icon"></i> Vacation
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Currently working on</label>
+                        <textarea class="form-input" name="projects" type="text" id="working-on" rows="3">{{ current_user.projects }}</textarea>
+                    </div>
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

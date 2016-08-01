@@ -1,0 +1,13 @@
+flask
+flask-migrate
+flask-sqlalchemy
+requests_oauthlib
+flask-login
+SQLAlchemy
+mysqlclient
+pyopenssl
+flask_turbolinks
+jinja2
+python-dateutil
+geopy
+xmltodict

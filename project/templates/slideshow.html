@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/owl.carousel.css') }}" />
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.4/moment-timezone-with-data.min.js"></script>
+        <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
+
+    </head>
+    <body>
+
+        <div class="owl-carousel">
+
+            {% if images %}
+                {% for i in images %}
+                    <div class="item"><img src="static/uploads/{{ i.picture }}.jpg" /></div>
+                {% endfor %}
+            {% endif %}
+
+        </div>
+        
+        <div id="sidebar" class="sidebar">
+            <header>
+                <div id="header-top" class="header-top">
+                    <div id="time-lund" class="time-lund"></div>
+                    <div id="date-lund" class="date-lund"></div>
+                </div>
+                <div id="header-bot" class="header-bot">
+                    <div id="time-tokyo" class="time-tokyo">
+                        <span id="time-tokyo-time" class="time-tokyo-time"></span>
+                        <span id="place-tokyo" class="place-tokyo">Tokyo</span>
+                    </div>
+                    <div id="time-sanmateo" class="time-sanmateo">
+                        <span id="time-sanmateo-time" class="time-sanmateo-time"></span>
+                        <span id="place-sanmateo" class="place-sanmateo">San Mateo</span>
+                    </div>
+                </div>
+            </header>
+            <div class="clear"></div>
+            <div class="bus-times">
+                <img src="{{ url_for('static', filename='img/bus.png')}}" class="bus-icon" />
+                <div id="first-bus-times" class="first-bus-times">
+                    
+                    <span id="first-bus-time" class="first-bus-time"></span> - 
+                    <span id="first-bus-time-no" class="first-bus-time"></span>
+                    <span id="first-bus-time-destination" class="first-bus-time"></span>
+                </div>
+                <div id="second-bus-times" class="second-bus-times">
+                    <span id="second-bus-time" class="second-bus-time"></span> - 
+                    <span id="second-bus-time-no" class="second-bus-time"></span>
+                    <span id="second-bus-time-destination" class="second-bus-time"></span>
+                </div>
+            </div>
+            <div id="lunch" class="lunch"></div>
+            <div class="clear"></div>
+            <div id="in-office" class="in-office"></div>
+        </div>  
+    </body>
+</html>
