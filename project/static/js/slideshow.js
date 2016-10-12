@@ -1,6 +1,5 @@
 var now = moment()
 
-// On load DOM
 $(document).ready(function() {
     current()
     busTimes()
