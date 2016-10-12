@@ -11,7 +11,7 @@ from project.config import config
 ## Create the app
 app = Flask(__name__)
 app.config.from_object(config['dev'])
-app.secret_key = "Oh WOOW Morty 33 Soo sEEekret 234"
+app.secret_key = ""
 
 ## DB inits
 db = SQLAlchemy(app)
